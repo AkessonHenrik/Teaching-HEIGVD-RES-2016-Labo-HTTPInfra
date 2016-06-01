@@ -4,7 +4,8 @@ var chance = new Chance();
 var express = require('express');
 var app = express();
 
-console.log("Bonjour, " + chance.name());
+var fs = require('fs');
+var obj = JSON.parse(fs.readFileSync('quotes.json', 'utf8'));
 
 /************** EXPRESS **************/
 app.get('/', function(req, res) {
@@ -17,15 +18,13 @@ app.listen(3000, function() {
 
 function generateJsonPayload() {
   var numberOfObjects = chance.integer({
-    min: 0,
+    min: 1,
     max: 10
   });
-  console.log("Number of objects = " + numberOfObjects);
   var array = [];
   for(var i = 0; i < numberOfObjects; i++) {
-    var text = "hehe"; //insert random stuff here
-    array.push({'number': i, 'text': text})
-    console.log(array[i]);
+    var object = obj.quotes[Math.abs(chance.integer()) % obj.quotes.length];
+    array.push(object);
   }
   return array;
 }
