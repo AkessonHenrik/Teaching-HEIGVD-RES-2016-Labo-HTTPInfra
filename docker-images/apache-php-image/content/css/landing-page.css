@@ -24,7 +24,10 @@ h6 {
 .topnav {
     font-size: 14px;
 }
-
+.navbar-default {
+        background-color: #ffffff;
+        color: #ffffff;
+}
 .lead {
     font-size: 18px;
     font-weight: 400;
@@ -39,10 +42,18 @@ h6 {
     background-size: cover;
 }
 
+.quotes {
+    letter-spacing: 2px;
+    font-size: 40px;
+    text-align: center;
+    font-color: ffffff;
+    font-weight: 400;
+    /*text-shadow: 2px 2px 3px rgba(0,0,0,0.6);*/
+}
 .intro-message {
     position: relative;
-    padding-top: 20%;
-    padding-bottom: 20%;
+    padding-top: 10%;
+    padding-bottom: 10%;
 }
 
 .intro-message > h1 {
@@ -60,7 +71,15 @@ h6 {
 .intro-message > h3 {
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
 }
-
+.alert.alert-info {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30%;
+    padding-left: 30%;
+  color: #ffffff;
+  background-color: #039be5;
+  border-color: #bce8f1;
+}
 @media(max-width:767px) {
     .intro-message {
         padding-bottom: 15%;
@@ -84,7 +103,6 @@ h6 {
         width: 100%;
     }
 }
-
 .network-name {
     text-transform: uppercase;
     font-size: 14px;
