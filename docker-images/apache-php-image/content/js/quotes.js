@@ -11,5 +11,5 @@ $(function() {
     });
   }
   loadQuotes();
-  setInterval(loadQuotes, 2000);
+  setInterval(loadQuotes, 500);
 });
